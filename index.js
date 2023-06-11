@@ -4,9 +4,7 @@ const router = require("./routes/shopping-routes");
 const AppError = require("./utils/app-error");
 const errorHandler = require("./utils/error-handler");
 const bodyParser = require("body-parser");
-const dotenv = require("dotenv");
-
-dotenv.config();
+require("dotenv").config();
 
 const app = express();
 const PORT = 3001;
@@ -24,5 +22,5 @@ app.all("*", (req, res, next) => {
 app.use(errorHandler);
 
 app.listen(process.env.PORT || PORT, () =>
-  console.log(`Server is listening on port ${PORT}`)
+  console.log(`Server is listening on port ${process.env.PORT || PORT}`)
 );
