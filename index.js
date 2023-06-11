@@ -21,6 +21,6 @@ app.all("*", (req, res, next) => {
 });
 app.use(errorHandler);
 
-app.listen(process.env.PORT || PORT, () =>
+app.listen(process.env.PORT || PORT, "0.0.0.0", () =>
   console.log(`Server is listening on port ${process.env.PORT || PORT}`)
 );
