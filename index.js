@@ -24,3 +24,5 @@ app.use(errorHandler);
 app.listen(process.env.PORT || PORT, () =>
   console.log(`Server is listening on port ${process.env.PORT || PORT}`)
 );
+
+module.exports = app;
